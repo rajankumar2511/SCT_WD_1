@@ -95,22 +95,22 @@ h2 {
 
 
 .name {
-  color: #ff4444; /* red */
+  color: #ff4444; 
   font-weight: bold;
 }
 
 .branch {
-  color: #28a745; /* green */
+  color: #28a745;
   font-weight: bold;
 }
 
 .college {
-  color: #3ea6ff; /* blue */
+  color: #3ea6ff; 
   font-weight: bold;
 }
 
 .highlight {
-  color: #28a745; /* green */
+  color: #28a745;
   font-weight: bold;
 }
 
