@@ -13,14 +13,12 @@ h1 {
   margin-bottom: 2rem;
 }
 
-/* Grid layout for cards */
 .faq-container {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.5rem;
 }
 
-/* Card styles */
 .faq {
   background: #1f1f1f;
   border-radius: 12px;
@@ -33,12 +31,10 @@ h1 {
   transform: translateY(-5px);
 }
 
-/* Hide native checkbox */
 .faq input[type="checkbox"] {
   display: none;
 }
 
-/* Question label */
 .question {
   display: block;
   font-size: 1rem;
@@ -59,13 +55,11 @@ h1 {
   transition: transform 0.2s;
 }
 
-/* Toggle + to - */
 input[type="checkbox"]:checked + .question::after {
   content: "−";
   color: #ff4444;
 }
 
-/* Collapsible answer */
 .answer {
   max-height: 0;
   overflow: hidden;
