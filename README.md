@@ -1,5 +1,7 @@
 # 🚀 SkillCraft Navigation Bar with React Routing
 
+“Inspired by SkillCraft — built for educational and demonstration purposes only.”
+
 This project was developed as part of a task to create a functional and stylish **navigation bar** using core web technologies and React. To elevate the task, I redesigned the **SkillCraft** website UI and integrated **React Router DOM** to demonstrate smooth client-side navigation.
 
 > 🔗 **Live Demo:** [https://sct-wd-1-delta.vercel.app/](https://sct-wd-1-delta.vercel.app/)
