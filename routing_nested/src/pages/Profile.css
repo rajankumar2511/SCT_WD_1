@@ -1,0 +1,145 @@
+.about-container {
+  background-color: #121212;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', sans-serif;
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+  animation: fadeIn 0.5s ease-in;
+}
+
+h1,
+h2 {
+  color: #3ea6ff;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+
+
+.intro,
+.motive {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.name {
+  color: #ff4444;
+  font-weight: bold;
+}
+
+.highlight {
+  color: #28a745;
+  font-weight: bold;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.links a {
+  text-decoration: none;
+  color: #fff;
+  background: #1e1e1e;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid #3ea6ff;
+}
+
+.links a img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(1.2);
+}
+
+.links a.github {
+  border-color: #fff;
+}
+
+.links a.linkedin {
+  border-color: #0a66c2;
+}
+
+.links a.email {
+  border-color: #ff4444;
+}
+
+.links a:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 15px rgba(62, 166, 255, 0.3);
+  background-color: #2a2a2a;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.name {
+  color: #ff4444; /* red */
+  font-weight: bold;
+}
+
+.branch {
+  color: #28a745; /* green */
+  font-weight: bold;
+}
+
+.college {
+  color: #3ea6ff; /* blue */
+  font-weight: bold;
+}
+
+.highlight {
+  color: #28a745; /* green */
+  font-weight: bold;
+}
+
+.task-links {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.task-links li {
+  margin-bottom: 0.7rem;
+}
+
+.task-links a {
+  text-decoration: none;
+  color: #00bcd4;
+  font-weight: 500;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.task-links a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+.task-links i {
+  font-size: 1.1rem;
+}

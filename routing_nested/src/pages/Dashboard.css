@@ -1,0 +1,82 @@
+.faq-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background: #121212;
+  color: #e0e0e0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+h1 {
+  color: #3ea6ff;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Grid layout for cards */
+.faq-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Card styles */
+.faq {
+  background: #1f1f1f;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease;
+}
+
+.faq:hover {
+  transform: translateY(-5px);
+}
+
+/* Hide native checkbox */
+.faq input[type="checkbox"] {
+  display: none;
+}
+
+/* Question label */
+.question {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #3ea6ff;
+  cursor: pointer;
+  position: relative;
+  padding-right: 1.5rem;
+}
+
+.question::after {
+  content: "+";
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 1.2rem;
+  color: #28a745;
+  transition: transform 0.2s;
+}
+
+/* Toggle + to - */
+input[type="checkbox"]:checked + .question::after {
+  content: "−";
+  color: #ff4444;
+}
+
+/* Collapsible answer */
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, margin-top 0.3s ease;
+  color: #ccc;
+  font-size: 0.95rem;
+  margin-top: 0;
+  line-height: 1.5;
+}
+
+input[type="checkbox"]:checked + .question + .answer {
+  max-height: 300px;
+  margin-top: 0.8rem;
+}

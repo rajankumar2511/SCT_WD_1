@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkillCraft To-Do App</title>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #121212;
+      color: #e0e0e0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      min-height: 100vh;
+    }
+
+    .todo-container {
+      background: rgba(26, 26, 26, 0.6);
+      padding: 2.5rem;
+      border-radius: 16px;
+      width: 100%;
+      max-width: 650px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #ffc107;
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    input[type="text"] {
+      padding: 14px 18px;
+      font-size: 1rem;
+      background-color: #1a1a1a;
+      color: #fff;
+      border: 2px solid #ffc107;
+      border-radius: 12px;
+    }
+
+    button {
+      background-color: #ffc107;
+      color: #000;
+      font-weight: 600;
+      font-size: 1.2rem;
+      padding: 0.7rem 1.5rem;
+      border: 2px solid #ffc107;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    li {
+      background: #222;
+      padding: 1.2rem;
+      border-radius: 12px;
+      margin-bottom: 1rem;
+      font-size: 1.1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+      transition: transform 0.2s ease;
+      cursor: move;
+    }
+
+    li.completed {
+      text-decoration: line-through;
+      opacity: 0.6;
+    }
+
+    .actions {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      margin-left: 1rem;
+    }
+
+    .actions button {
+      font-size: 0.9rem;
+      padding: 0.4rem 0.7rem;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+    }
+
+    .actions button:nth-child(1) {
+      background: #00ff7f;
+    }
+
+    .actions button:nth-child(2) {
+      background: #3ea6ff;
+    }
+
+    .actions button:nth-child(3) {
+      background: #ff4d4d;
+      color: white;
+    }
+
+    .datetime {
+      font-size: 0.85rem;
+      color: #ccc;
+      margin-top: 0.3rem;
+    }
+
+    .tag-input {
+      font-size: 0.9rem;
+      padding: 10px;
+      border-radius: 8px;
+      background: #1a1a1a;
+      color: #ccc;
+    }
+
+    .tags {
+      margin-top: 6px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .tag {
+      background-color: #ffc107;
+      color: #000;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 0.8rem;
+    }
+
+    .predefined-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 1rem;
+    }
+
+    .predefined-tags button {
+      background: #333;
+      color: #ffc107;
+      padding: 6px 12px;
+      border-radius: 8px;
+      border: 1px solid #ffc107;
+      font-size: 0.85rem;
+      cursor: pointer;
+    }
+
+    .filter-group {
+      margin-bottom: 1.5rem;
+    }
+
+    .filter-group select {
+      padding: 10px;
+      border-radius: 8px;
+      background: #1a1a1a;
+      color: #ffc107;
+      font-weight: 500;
+      border: 1px solid #ffc107;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="todo-container">
+    <h1><i class="fas fa-thumbtack" style="color: #ffc107; margin-right: 10px;"></i> To-Do App</h1>
+
+
+    <div class="input-group">
+      <input type="text" id="taskInput" placeholder="Enter your task..." />
+      <input id="datetimeInput" placeholder="Select date & time" />
+      <input type="text" id="tagsInput" class="tag-input" placeholder="Enter tags (comma-separated)" />
+      <div class="predefined-tags">
+        <button onclick="addTag('Work')">Work</button>
+        <button onclick="addTag('Home')">Home</button>
+        <button onclick="addTag('Personal')">Personal</button>
+        <button onclick="addTag('Urgent')">Urgent</button>
+        <button onclick="tagsInput.focus()">Custom</button>
+      </div>
+
+      <button onclick="addTask()"><i class="fas fa-plus" style="margin-right: 8px;"></i> Add Task</button>
+    </div>
+    <div class="filter-group" id="filterContainer" style="display: none;">
+      <label for="filterSelect">Filter by Tag:</label>
+      <select id="filterSelect" onchange="filterTasks()">
+        <option value="all">All</option>
+      </select>
+    </div>
+
+
+    <ul id="taskList"></ul>
+  </div>
+
+  <!-- Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+
+  <script>
+    flatpickr("#datetimeInput", {
+      enableTime: true,
+      dateFormat: "Y-m-d H:i",
+      altInput: true,
+      altFormat: "F j, Y (h:i K)"
+    });
+
+    const taskInput = document.getElementById('taskInput');
+    const datetimeInput = document.getElementById('datetimeInput');
+    const tagsInput = document.getElementById('tagsInput');
+    const taskList = document.getElementById('taskList');
+    const filterSelect = document.getElementById('filterSelect');
+
+    function addTag(tag) {
+      if (!tag) return;
+      const currentTags = tagsInput.value.split(',').map(t => t.trim()).filter(Boolean);
+      if (!currentTags.includes(tag)) {
+        currentTags.push(tag);
+        tagsInput.value = currentTags.join(', ');
+      }
+    }
+
+    function addTask() {
+      const taskText = taskInput.value.trim();
+      const datetime = datetimeInput.value;
+      const tags = tagsInput.value.split(',').map(tag => tag.trim()).filter(Boolean);
+
+      if (!taskText) return;
+
+      const li = document.createElement('li');
+      li.dataset.datetime = datetime; // 🔥 For editable datetime reference
+
+      li.dataset.tags = tags.join(',').toLowerCase(); // for filtering
+
+      const content = document.createElement('div');
+      content.innerHTML = `<strong>${taskText}</strong>`;
+
+      if (datetime) {
+        const dt = document.createElement('div');
+        dt.className = 'datetime';
+        dt.innerHTML = `<i class="fas fa-clock" style="margin-right: 6px; color: #ffc107;"></i>${new Date(datetime).toLocaleString('en-IN', {
+          dateStyle: 'medium',
+          timeStyle: 'short'
+        })}`;
+        content.appendChild(dt);
+      }
+
+      if (tags.length > 0) {
+        const tagContainer = document.createElement('div');
+        tagContainer.className = 'tags';
+        tags.forEach(tag => {
+          const tagEl = document.createElement('span');
+          tagEl.className = 'tag';
+          tagEl.textContent = tag;
+          tagContainer.appendChild(tagEl);
+          updateFilterOptions(tag);
+        });
+        content.appendChild(tagContainer);
+      }
+
+      const actions = document.createElement('div');
+      actions.className = 'actions';
+
+      const completeBtn = document.createElement('button');
+      completeBtn.innerHTML = '<i class="fas fa-check"></i>';
+      completeBtn.onclick = () => li.classList.toggle('completed');
+
+      const editBtn = document.createElement('button');
+      editBtn.innerHTML = '<i class="fas fa-pen"></i>';
+      editBtn.onclick = () => {
+        editBtn.onclick = () => {
+          const currentTask = content.querySelector('strong').textContent;
+          const currentTags = tags.map(t => t).join(', ');
+          const currentDate = datetimeInput.value;
+
+          content.innerHTML = `
+    <input type="text" value="${currentTask}" class="tag-input" id="editTaskInput" style="margin-bottom: 8px;" />
+    <input type="text" id="editDateInput" class="tag-input" placeholder="Select date & time" style="margin-bottom: 8px;" />
+    <input type="text" value="${currentTags}" class="tag-input" id="editTagsInput" placeholder="Tags (comma-separated)" />
+    <button id="saveEditBtn" style="margin-top: 10px; padding: 6px 10px; font-size: 0.85rem; background: #00ff7f; color: #000; border-radius: 6px; border: none;">Save</button>
+  `;
+
+          // Reinitialize Flatpickr on edit date input
+          flatpickr("#editDateInput", {
+            enableTime: true,
+            dateFormat: "Y-m-d H:i",
+            altInput: true,
+            altFormat: "F j, Y (h:i K)"
+          });
+
+          // Optional: pre-fill the date if available
+          const editDateInput = content.querySelector("#editDateInput");
+          if (li.dataset.datetime) {
+            editDateInput._flatpickr.setDate(new Date(li.dataset.datetime), true);
+          }
+
+          content.querySelector('#saveEditBtn').onclick = () => {
+            const updatedTask = content.querySelector('#editTaskInput').value.trim();
+            const updatedDate = content.querySelector('#editDateInput').value;
+            const updatedTags = content.querySelector('#editTagsInput').value.split(',').map(tag => tag.trim()).filter(Boolean);
+
+            if (updatedTask) {
+              // Clear and rebuild content
+              content.innerHTML = `<strong>${updatedTask}</strong>`;
+
+              if (updatedDate) {
+                const dt = document.createElement('div');
+                dt.className = 'datetime';
+                dt.innerHTML = `<i class="fas fa-clock" style="margin-right: 6px; color: #ffc107;"></i>${new Date(updatedDate).toLocaleString('en-IN', {
+                  dateStyle: 'medium',
+                  timeStyle: 'short'
+                })}`;
+                content.appendChild(dt);
+                li.dataset.datetime = updatedDate;
+              }
+
+              if (updatedTags.length > 0) {
+                const tagContainer = document.createElement('div');
+                tagContainer.className = 'tags';
+                updatedTags.forEach(tag => {
+                  const tagEl = document.createElement('span');
+                  tagEl.className = 'tag';
+                  tagEl.textContent = tag;
+                  tagContainer.appendChild(tagEl);
+                  updateFilterOptions(tag);
+                });
+                content.appendChild(tagContainer);
+                li.dataset.tags = updatedTags.join(',').toLowerCase();
+              }
+            }
+          };
+        };
+
+      };
+
+      const deleteBtn = document.createElement('button');
+      deleteBtn.innerHTML = '<i class="fas fa-trash"></i>';
+      deleteBtn.onclick = () => li.remove();
+
+      actions.append(completeBtn, editBtn, deleteBtn);
+      li.append(content, actions);
+      taskList.appendChild(li);
+      document.getElementById('filterContainer').style.display = 'block';
+
+
+      taskInput.value = '';
+      datetimeInput.value = '';
+      tagsInput.value = '';
+    }
+
+    function updateFilterOptions(tag) {
+      tag = tag.trim();
+      if (!Array.from(filterSelect.options).some(opt => opt.value.toLowerCase() === tag.toLowerCase())) {
+        const option = document.createElement('option');
+        option.value = tag;
+        option.textContent = tag;
+        filterSelect.appendChild(option);
+      }
+    }
+
+    function filterTasks() {
+      const selectedTag = filterSelect.value.toLowerCase();
+      const tasks = taskList.querySelectorAll('li');
+
+      tasks.forEach(task => {
+        const taskTags = task.dataset.tags || '';
+        if (selectedTag === 'all' || taskTags.includes(selectedTag)) {
+          task.style.display = '';
+        } else {
+          task.style.display = 'none';
+        }
+      });
+    }
+
+    new Sortable(taskList, {
+      animation: 150,
+      ghostClass: 'dragging'
+    });
+  </script>
+</body>
+
+</html>
