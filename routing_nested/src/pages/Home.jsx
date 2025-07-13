@@ -8,7 +8,6 @@ import Logo1 from '../assets/logo1.png';
 const Home = () => {
   return (
     <>
-      {/* Hero Section */}
       <div className="hero">
         <div className="lines">
           <div className="blueline">Empowering a Generation of Innovators</div>
@@ -34,7 +33,6 @@ const Home = () => {
 
 
       <section className="feature-section">
-        {/* Original Cards */}
         <div className="card">
           <div className="icon pink">
             <img src="https://img.icons8.com/ios-filled/50/ffffff/user-group-man-man.png" alt="support" />
@@ -59,7 +57,6 @@ const Home = () => {
           <p>Build valuable connections with interns and industry professionals.</p>
         </div>
 
-        {/* New Cards */}
         <div className="card">
           <div className="icon orange">
             <img src="https://img.icons8.com/ios-filled/50/ffffff/diploma.png" alt="certificate" />
