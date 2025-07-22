@@ -3,12 +3,7 @@ import { Outlet, Link } from 'react-router-dom'; // ✅ Import Outlet and Link
 import './Dashboard.css';
 
 const Dashboard = () => {
-  const stats = [
-    { title: '📘 Courses Enrolled', value: 3 },
-    { title: '📝 Assignments Due', value: 2 },
-    { title: '📊 Overall Grade', value: 'A-' },
-    { title: '🔥 Streak Days', value: 5 }
-  ];
+ 
 
   return (
 
