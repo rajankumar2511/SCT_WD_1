@@ -1,6 +1,6 @@
 import React from 'react';
 import './Home.css';
-import poster from '../assets/poster.png';
+import poster from '../assets/poster.jpg';
 import whyImg from '../assets/whyus.jpg';
 import Logo1 from '../assets/logo1.png';
 
@@ -8,19 +8,19 @@ import Logo1 from '../assets/logo1.png';
 const Home = () => {
   return (
     <>
+      {/* Hero Section */}
       <div className="hero">
         <div className="lines">
-          <div className="blueline">Empowering a Generation of Innovators</div>
+          <div className="blueline">Explore the World with Confidence</div>
           <div className="herohead">
-            SkillCraft: Building Brighter Futures Through Learning and Growth
+            JetHue: Discover, Plan, and Experience Travel Like Never Before
           </div>
           <div className="heropara">
-            SkillCraft is more than a platform — it’s a launchpad for students to unlock their potential,
-            explore their passions, and gain real-world experience. We provide the tools, guidance, and
-            opportunities needed to turn curiosity into capability and ambition into achievement. The future is yours — let’s build it together.
+            JetHue is your trusted travel companion, helping you explore breathtaking destinations,
+            craft personalized itineraries, and make memories that last a lifetime. Whether you're planning a weekend getaway or a world tour, we've got your back.
           </div>
           <div className="buttons">
-            <button className="button b1">Apply for Internship</button>
+            <button className="button b1">Start Your Journey</button>
           </div>
         </div>
         <div>
@@ -29,56 +29,58 @@ const Home = () => {
       </div>
 
 
-      <div class="ptrust">Built for learners,Backed by experts.</div>
+      <div class="ptrust">Trusted by Travelers, Powered by Experts</div>
 
 
       <section className="feature-section">
+        {/* Original Cards */}
         <div className="card">
           <div className="icon pink">
             <img src="https://img.icons8.com/ios-filled/50/ffffff/user-group-man-man.png" alt="support" />
           </div>
-          <h3 className="headca1">24/7 Support</h3>
-          <p>We're always here. Day or night, your queries will never go unanswered.</p>
+          <h3 className="headca1">24/7 Travel Support</h3>
+          <p>Any issue, any time — our travel team is just a message away.</p>
         </div>
 
         <div className="card">
           <div className="icon green">
-            <img src="https://img.icons8.com/ios-glyphs/50/ffffff/planet--v1.png" alt="ownership" />
+            <img src="https://img.icons8.com/ios-glyphs/50/ffffff/planet--v1.png" alt="global" />
           </div>
-          <h3 className="headca1">Take Ownership</h3>
-          <p>Drive tasks to completion with confidence and personal responsibility.</p>
+          <h3 className="headca1">Global Destinations</h3>
+          <p>From hidden gems to famous landmarks — all in one place.</p>
         </div>
 
         <div className="card">
           <div className="icon orange">
-            <img src="https://img.icons8.com/ios-filled/50/ffffff/conference-call.png" alt="networking" />
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/conference-call.png" alt="community" />
           </div>
-          <h3 className="headca1">Networking</h3>
-          <p>Build valuable connections with interns and industry professionals.</p>
+          <h3 className="headca1">Travel Community</h3>
+          <p>Join a community of explorers, adventurers, and storytellers.</p>
         </div>
 
+        {/* New Cards */}
         <div className="card">
           <div className="icon orange">
-            <img src="https://img.icons8.com/ios-filled/50/ffffff/diploma.png" alt="certificate" />
+            <img src="https://img.icons8.com/ios-filled/50/ffffff/diploma.png" alt="verified" />
           </div>
-          <h3 className="headca1">Verified Certificates</h3>
-          <p>Get Verified Certificates to prove your hard work!</p>
+          <h3 className="headca1">Verified Guides</h3>
+          <p>Get trusted recommendations from certified local experts.</p>
         </div>
 
         <div className="card">
           <div className="icon pink">
-            <img src="https://img.icons8.com/ios/50/ffffff/stack-of-paper--v1.png" alt="content" />
+            <img src="https://img.icons8.com/ios/50/ffffff/stack-of-paper--v1.png" alt="articles" />
           </div>
-          <h3 className="headca1">High-quality Content</h3>
-          <p>Great content to prepare students for their future careers.</p>
+          <h3 className="headca1">Inspiring Travel Content</h3>
+          <p>Read tips, stories, and guides to fuel your next adventure.</p>
         </div>
 
         <div className="card">
           <div className="icon green">
             <img src="https://img.icons8.com/ios-filled/50/ffffff/hand-holding-heart.png" alt="experience" />
           </div>
-          <h3 className="headca1">Hands-on Experience</h3>
-          <p>Gain practical experience by working on real-world projects.</p>
+          <h3 className="headca1">Memorable Experiences</h3>
+          <p>Plan trips that leave you with memories — not regrets.</p>
         </div>
       </section>
 
@@ -89,15 +91,15 @@ const Home = () => {
           <img src={whyImg} alt="Why choose us" />
         </div>
         <div className="whyus-content">
-          <h2 className="whyus-heading">Why Choose SkillCraft?</h2>
+          <h2 className="whyus-heading">Why Travel with JetHue?</h2>
           <p className="whyus-subtitle">
-            We provide industry-designed internship programs.
+            We create seamless, stress-free journeys from dream to destination.
           </p>
           <p className="whyus-para">
-            At the heart of SkillCraft Technology lies a commitment to empowering individuals through skills development. We understand that in today's dynamic landscape, continuous upskilling is not just an advantage but a necessity.
+            JetHue is built for curious minds and free spirits. Whether you're a solo traveler, a family, or a digital nomad, we craft experiences that match your pace, passion, and personality.
           </p>
           <p className="whyus-para">
-            Through our meticulously curated internship programs and educational initiatives, we equip students with the practical knowledge and hands-on experience needed to thrive in their chosen fields.
+            With local insights, smart tools, and a vibrant travel community, Jethue redefines the way you explore the world — making each trip smooth, meaningful, and unforgettable.
           </p>
         </div>
       </section>
@@ -170,36 +172,36 @@ const Home = () => {
         </div>
       </div>
 
-      <div class="foot">
+        <div class="foot">
         <div class="f1">
           <div className="xyu">
-            <img src={Logo1} alt="Skillcraft logo" className="logo-img1" />
-            <div class="ftitle">SkillCraft TECHNOLOGY</div>
+            <img src={Logo1} alt="JetHue logo" className="logo-img1" />
+            <div class="ftitle">JetHue TRAVELS</div>
           </div>
-          <div class="fpara">Empowering a Generation of Innovators</div>
+          <div class="fpara">Explore. Dream. Discover.</div>
         </div>
         <div class="f">
-          <div class="fhead">Internships</div>
-          <a href="#" class="flink">Web development</a>
-          <a href="#" class="flink">Graphics Design</a>
-          <a href="#" class="flink">Data Sciene</a>
-          <a href="#" class="flink">Software Development</a>
+          <div class="fhead">Travel Packages</div>
+          <a href="#" class="flink">Europe Tours</a>
+          <a href="#" class="flink">Beach Getaways</a>
+          <a href="#" class="flink">Mountain Treks</a>
+          <a href="#" class="flink">Cultural Journeys</a>
         </div>
         <div class="f">
           <div class="fhead">Quick Links</div>
           <a href="#" class="flink">Home</a>
-          <a href="#" class="flink">Features</a>
-          <a href="#" class="flink">FAQs</a>
-          <a href="#" class="flink">Contact us</a>
+          <a href="#" class="flink">Destinations</a>
+          <a href="#" class="flink">Plan a Trip</a>
+          <a href="#" class="flink">Contact Us</a>
         </div>
       </div>
       <div class="arr">
-        © 2025 SkillCraft. Recreated for internship learning purposes by Rajan Kumar.
+        © 2025 JetHue. Travel smarter, go further. Created by Rajan Kumar.
       </div>
-
-
-
     </>
+
+
+
   );
 };
 
