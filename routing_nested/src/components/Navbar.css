@@ -1,3 +1,4 @@
+/* 🔲 Base Dark Glassy Navbar */
 .navbar {
   position: fixed;
   top: 0;
@@ -18,12 +19,14 @@
   transition: all 0.3s ease;
 }
 
+/* 🔽 Compact when at top */
 .navbar.top {
   margin: 50px;
   background-color: rgba(17, 17, 17, 0.6);
   box-shadow: none;
 }
 
+/* 🖼️ Logo container */
 .logo {
   display: flex;
   align-items: center;
@@ -35,10 +38,14 @@
 
 .logo-img {
   width: 15rem;
-  height: auto;
-  transition: width 0.3s ease;
+  height: 6rem;
+  /* set a fixed height */
+  border-radius: 10px;
 }
 
+
+
+/* 🧭 Nav links layout */
 .nav-links {
   list-style: none;
   display: flex;
@@ -48,6 +55,7 @@
   transition: all 0.3s ease;
 }
 
+/* 🌐 Link default state */
 .nav-links li a {
   color: #ccc;
   text-decoration: none;
@@ -85,6 +93,7 @@ body {
   z-index: 1100;
 }
 
+/* 🌐 Default (≥ 1100px) */
 .logo-img {
   width: 15rem;
 }
@@ -94,6 +103,7 @@ body {
   column-gap: 4rem;
 }
 
+/* 💻 980px – 1100px */
 @media (min-width: 980px) and (max-width: 1100px) {
   .logo-img {
     width: 12rem;
@@ -105,6 +115,7 @@ body {
   }
 }
 
+/* 📱 826px – 980px */
 @media (min-width: 826px) and (max-width: 980px) {
   .logo-img {
     width: 10rem;
@@ -116,6 +127,7 @@ body {
   }
 }
 
+/* 📱 680px – 826px */
 @media (min-width: 691px) and (max-width: 826px) {
   .logo-img {
     width: 8rem;
@@ -131,6 +143,7 @@ body {
   }
 }
 
+/* 📱 ✅ 620px – 680px */
 @media (min-width: 620px) and (max-width: 690px) {
   .logo-img {
     width: 7rem;
@@ -146,6 +159,7 @@ body {
   }
 }
 
+/* 📱 ✅ 547px – 620px */
 @media (min-width: 547px) and (max-width: 620px) {
   .logo-img {
     width: 6.2rem;
@@ -161,6 +175,7 @@ body {
   }
 }
 
+/* 📱 ✅ 526px – 547px */
 @media (min-width: 526px) and (max-width: 547px) {
   .logo-img {
     width: 6rem;
@@ -176,6 +191,7 @@ body {
   }
 }
 
+/* 📱 ✅ 480px – 526px */
 @media (min-width: 500px) and (max-width: 526px) {
   .logo-img {
     width: 5.5rem;
@@ -191,6 +207,7 @@ body {
   }
 }
 
+/* 📱 ≤ 479px — Hamburger view */
 @media (max-width: 499px) {
   .logo-img {
     width: 6rem;
