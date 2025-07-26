@@ -1,135 +1,124 @@
 import React from 'react';
-import './About.css';
+import './About.css'; // Or rename to Travel.css
 
-const About = () => {
+const Travel = () => {
   return (
     <div className="about-container">
-      <h1>👨‍🎓 Our Internships</h1>
+      <h1>🌍 Explore Our Travel Experiences</h1>
       <p className="intro">
-        Our internship program offers a hands-on learning experience where you can turn theory into real-world impact. Whether you're an aspiring developer, a creative designer, or a future marketing leader, we provide opportunities tailored to your passion and goals. Let us help you shape a future full of growth, learning, and possibilities.      </p>
+        Discover unforgettable journeys tailored to your wanderlust. Whether you're seeking adventure, cultural immersion, or relaxation, our curated trips offer something for everyone. Travel with us and turn every destination into a lifelong memory.
+      </p>
 
       <div className="about-cards">
         <div className="about-card">
-          <h3> Web Development </h3>
+          <h3> ✈️ Europe Explorer </h3>
           <div className="buttons">
-            <button className="button b1">Apply for Internship</button>
-          </div >
-          <div className="cinh">
-            <div className="cin">Overview</div>
-            <div className="cin">HTML/CSS</div>
-            <div className="cin">Javascript & Frameworks</div>
-            <div className="cin">Responsive Website</div>
-            <div className="cin">Web apps</div>
+            <button className="button b1">Book Now</button>
           </div>
-        </div>
-         <div className="about-card">
-          <h3> Software Development </h3>
-          <div className="buttons">
-            <button className="button b1">Apply for Internship</button>
-          </div >
           <div className="cinh">
-            <div className="cin">Overview</div>
-            <div className="cin">SD LifeCycle</div>
-            <div className="cin">CLI Apps</div>
-            <div className="cin">GUI Apps</div>
-            <div className="cin">Web Scraping</div>
+            <div className="cin">Paris, Rome, Barcelona</div>
+            <div className="cin">City Tours</div>
+            <div className="cin">Museum Passes</div>
+            <div className="cin">Local Cuisine</div>
+            <div className="cin">Luxury Hotels</div>
           </div>
         </div>
 
-         <div className="about-card">
-          <h3> App Development </h3>
+        <div className="about-card">
+          <h3> 🏔️ Himalayan Adventure </h3>
           <div className="buttons">
-            <button className="button b1">Apply for Internship</button>
-          </div >
+            <button className="button b1">Book Now</button>
+          </div>
           <div className="cinh">
-            <div className="cin">Overview</div>
-            <div className="cin">Kotlin/Swift/Flutter/React Native</div>
-            <div className="cin">Simple Apps</div>
-            <div className="cin">Advanced Apps</div>
-            <div className="cin">Cloud Apps</div>
+            <div className="cin">Trekking</div>
+            <div className="cin">Camping</div>
+            <div className="cin">Spiritual Retreat</div>
+            <div className="cin">Snow Activities</div>
+            <div className="cin">Monastery Visits</div>
           </div>
         </div>
 
-         <div className="about-card">
-          <h3> Machine Learning </h3>
+        <div className="about-card">
+          <h3> 🏝️ Maldives Getaway </h3>
           <div className="buttons">
-            <button className="button b1">Apply for Internship</button>
-          </div >
+            <button className="button b1">Book Now</button>
+          </div>
           <div className="cinh">
-            <div className="cin">Overview</div>
-            <div className="cin">Data Analysis</div>
-            <div className="cin">Unsupervised Learning</div>
-            <div className="cin">Deep Learning</div>
+            <div className="cin">Beach Resorts</div>
+            <div className="cin">Snorkeling</div>
+            <div className="cin">Couple Retreat</div>
+            <div className="cin">Private Villas</div>
+            <div className="cin">Sunset Cruises</div>
           </div>
         </div>
 
-         <div className="about-card">
-          <h3> Data Science </h3>
+        <div className="about-card">
+          <h3> 🌆 Urban Escapes </h3>
           <div className="buttons">
-            <button className="button b1">Apply for Internship</button>
-          </div >
+            <button className="button b1">Book Now</button>
+          </div>
           <div className="cinh">
-            <div className="cin">Overview</div>
-            <div className="cin">EDA</div>
-            <div className="cin">Data Preprocessing</div>
-            <div className="cin">Data Visualization</div>
-            <div className="cin">BI Tools</div>
+            <div className="cin">Dubai</div>
+            <div className="cin">New York</div>
+            <div className="cin">Tokyo</div>
+            <div className="cin">Luxury Malls</div>
+            <div className="cin">Skyscraper Views</div>
           </div>
         </div>
 
-         <div className="about-card">
-          <h3> Cyber Security </h3>
+        <div className="about-card">
+          <h3> 🐾 Jungle Safari </h3>
           <div className="buttons">
-            <button className="button b1">Apply for Internship</button>
-          </div >
+            <button className="button b1">Book Now</button>
+          </div>
           <div className="cinh">
-            <div className="cin">Overview</div>
-            <div className="cin">Encyption</div>
-            <div className="cin">Obfuscation</div>
-            <div className="cin">Logging</div>
-            <div className="cin">Security Analysis</div>
+            <div className="cin">National Parks</div>
+            <div className="cin">Wildlife Spotting</div>
+            <div className="cin">Nature Trails</div>
+            <div className="cin">Eco Lodges</div>
+            <div className="cin">Bird Watching</div>
           </div>
         </div>
 
-         <div className="about-card">
-          <h3> Graphics Design </h3>
+        <div className="about-card">
+          <h3> 🧘 Wellness Retreats </h3>
           <div className="buttons">
-            <button className="button b1">Apply for Internship</button>
-          </div >
+            <button className="button b1">Book Now</button>
+          </div>
           <div className="cinh">
-            <div className="cin">Overview</div>
-            <div className="cin">Posters</div>
-            <div className="cin">Logo</div>
-            <div className="cin">Business Card</div>
-            <div className="cin">Magazine Covers </div>
+            <div className="cin">Yoga in Bali</div>
+            <div className="cin">Ayurveda in Kerala</div>
+            <div className="cin">Spa Packages</div>
+            <div className="cin">Meditation</div>
+            <div className="cin">Detox Meals</div>
           </div>
         </div>
 
-         <div className="about-card">
-          <h3> UI/UX </h3>
+        <div className="about-card">
+          <h3> 🎭 Cultural Trails </h3>
           <div className="buttons">
-            <button className="button b1">Apply for Internship</button>
-          </div >
+            <button className="button b1">Book Now</button>
+          </div>
           <div className="cinh">
-            <div className="cin">Overview</div>
-            <div className="cin">Modern Homepage</div>
-            <div className="cin">Dark Mode</div>
-            <div className="cin">Checkout Flow</div>
-            <div className="cin">User Journey Map</div>
+            <div className="cin">Heritage Walks</div>
+            <div className="cin">Temples & Palaces</div>
+            <div className="cin">Traditional Food</div>
+            <div className="cin">Art Festivals</div>
+            <div className="cin">Local Markets</div>
           </div>
         </div>
 
-         <div className="about-card">
-          <h3> Digital Marketing</h3>
+        <div className="about-card">
+          <h3> 🚴 Active Adventures </h3>
           <div className="buttons">
-            <button className="button b1">Apply for Internship</button>
-          </div >
+            <button className="button b1">Book Now</button>
+          </div>
           <div className="cinh">
-            <div className="cin">Overview</div>
-            <div className="cin">Influencer Marketing</div>
-            <div className="cin">Brand Persona</div>
-            <div className="cin">Competitor Analysis</div>
-            <div className="cin">Content Calendar</div>
+            <div className="cin">Biking Tours</div>
+            <div className="cin">Rafting</div>
+            <div className="cin">Rock Climbing</div>
+            <div className="cin">Ziplining</div>
+            <div className="cin">Hiking</div>
           </div>
         </div>
       </div>
@@ -137,4 +126,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default Travel;
