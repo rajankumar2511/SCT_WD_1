@@ -1,8 +1,6 @@
-# 🚀 SkillCraft Navigation Bar with React Routing
+# ✈️ JetHue Navigation Bar with React Routing
 
-“Inspired by SkillCraft — built for educational and demonstration purposes only.”
-
-This project was developed as part of a task to create a functional and stylish **navigation bar** using core web technologies and React. To elevate the task, I redesigned the **SkillCraft** website UI and integrated **React Router DOM** to demonstrate smooth client-side navigation.
+This project was developed as part of a task to create a functional and stylish **navigation bar** using core web technologies and React. To elevate the experience, I designed a travel-themed website called **JetHue** and integrated **React Router DOM** to demonstrate smooth client-side navigation.
 
 > 🔗 **Live Demo:** [https://sct-wd-1-delta.vercel.app/](https://sct-wd-1-delta.vercel.app/)
 
@@ -13,7 +11,7 @@ This project was developed as part of a task to create a functional and stylish 
 The primary goal was to:
 - Create a working **navigation bar**
 - Use **React Routing** to handle page transitions
-- Design a visually engaging experience using a **custom layout** inspired by SkillCraft
+- Design a visually engaging experience using a **custom layout** inspired by travel platforms
 
 ---
 
@@ -33,12 +31,12 @@ The primary goal was to:
 
 - ⚡ **Single Page Application (SPA)** with instant routing
 - 📱 Fully responsive layout
-- 🎯 Minimal and clean UI with consistent color palette
+- 🎯 Minimal and clean UI with a soft travel theme
 - 🧭 Navigation bar with links to:
   - Home
-  - Internships(about)
-  - FAQs(Dashboard)
-  - Made by(Profile)
+  - Destinations (About)
+  - FAQs (Dashboard)
+  - Made by (Profile)
 - 🌐 Smooth client-side navigation using `react-router-dom`
 - 🗂️ Clean folder structure with separation of components and pages
 
@@ -82,11 +80,8 @@ The project is deployed via **Vercel** with a custom `vercel.json` file to enabl
 
 ---
 
-
-
 ## 🙌 Acknowledgements
 
-- **SkillCraft** — for visual inspiration
 - **React & Vite** — for building a fast, modern frontend
 - **Vercel** — for seamless deployment
 
@@ -96,3 +91,4 @@ The project is deployed via **Vercel** with a custom `vercel.json` file to enabl
 
 **Rajan Kumar**  
 [GitHub](https://github.com/rajankumar2511)
+
