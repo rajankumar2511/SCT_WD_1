@@ -426,6 +426,7 @@ textarea {
   max-width: 1400px;
   background-color: #ffffff;
   flex-direction: row;
+  gap: 30px;
   margin: 0 auto;
 
 }
@@ -453,7 +454,7 @@ textarea {
 .f {
   display: flex;
   flex-direction: column;
-  row-gap: 5px;
+  row-gap: 10px;
 }
 
 .fhead {
@@ -464,6 +465,7 @@ textarea {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
+  
 }
 
 @media (max-width: 980px) {
@@ -471,7 +473,7 @@ textarea {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 30px;
+    gap: 10px;
   }
 
   .f1 {
@@ -505,6 +507,7 @@ textarea {
 
   .fhead {
     font-size: 1.1rem;
+
   }
 
   .flink {
@@ -513,11 +516,11 @@ textarea {
   }
 }
 .logo-img1 {
-  width: 50px;             
+  width: 50px;            
   height: 50px;
-  border-radius: 8px;      
-  object-fit: cover;      
-  background-color: #000;
+  border-radius: 8px;     
+  object-fit: cover;
+  background-color: #000; 
   padding: 4px;
-  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2); 
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.2);
 }
