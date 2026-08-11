@@ -1,15 +1,16 @@
-# SCT_WD_1
+# SCT_WD_1 – Responsive Navigation Menu
 
+A responsive navigation menu built with **HTML, CSS, and JavaScript**. The navbar remains fixed at the top of the page, changes style when the user scrolls, highlights the active section, and includes a mobile-friendly navigation menu.
 
-# Field Notes Navigation Demo
+## Live Demo
 
-A simple responsive navigation bar built with HTML, CSS, and JavaScript.
+🔗 https://rajankumar2511.github.io/SCT_WD_1/
 
 ## Features
 
 * Fixed navigation bar
 * Transparent navbar on the hero section
-* Navbar changes style when scrolling
+* Navbar changes style on scroll
 * Active section highlighting
 * Smooth scrolling
 * Responsive mobile menu
@@ -23,18 +24,17 @@ A simple responsive navigation bar built with HTML, CSS, and JavaScript.
 
 ## How to Run
 
-1. Download or clone the project.
-2. Open the `index.html` file in your browser.
-3. Scroll the page to see the navbar animation and active link highlighting.
+1. Clone this repository.
+2. Open `index.html` in your browser.
 
 ## Project Structure
 
+```text
+SCT_WD_1/
+├── index.html
+└── README.md
 ```
-index.html
-```
-
-Everything (HTML, CSS, and JavaScript) is contained in a single file.
 
 ## Purpose
 
-This project is a simple front-end UI component that can be used as a starting point for a personal website, portfolio, or landing page navigation menu.
+This project was created as part of a web development practice task to build an interactive and responsive navigation menu using HTML, CSS, and JavaScript.
